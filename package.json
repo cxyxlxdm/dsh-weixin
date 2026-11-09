@@ -1,0 +1,63 @@
+{
+  "name": "dsh-weixin",
+  "version": "0.1.0",
+  "description": "Personal WeChat (ClawBot / iLink) channel for DeepSeek Harness: chat with a DSH agent from the WeChat ClawBot plugin.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "wechat",
+    "weixin",
+    "clawbot",
+    "ilink",
+    "messaging"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cxyxlxdm/dsh-weixin.git"
+  },
+  "homepage": "https://github.com/cxyxlxdm/dsh-weixin#readme",
+  "engines": {
+    "dsh": ">=0.2.2-rc.1 <0.3.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --test tests/smoke.test.mjs",
+    "install-local": "node scripts/install.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*",
+    "@deepseek-ai/dsh-agent": "*",
+    "@deepseek-ai/dsh-agent-preset-registry": "*",
+    "@deepseek-ai/dsh-brand": "*",
+    "@deepseek-ai/dsh-llm": "*",
+    "@deepseek-ai/dsh-permission-presets": "*",
+    "@deepseek-ai/dsh-session": "*",
+    "@deepseek-ai/dsh-session-title": "*",
+    "@deepseek-ai/dsh-storage-domain": "*",
+    "@deepseek-ai/dsh-user-approval": "*",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "typescript": "*"
+  }
+}
