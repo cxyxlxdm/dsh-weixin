@@ -1,0 +1,68 @@
+{
+  "format": 1,
+  "title": {
+    "en": "Ailurus DSH plugins",
+    "zh": "Ailurus 的 DSH 插件"
+  },
+  "description": {
+    "en": "Plugins for DeepSeek Harness maintained by cxyxlxdm.",
+    "zh": "cxyxlxdm 维护的 DeepSeek Harness 插件。"
+  },
+  "metadata": {
+    "categories": {
+      "messaging": {
+        "title": {
+          "en": "Messaging",
+          "zh": "消息通道"
+        }
+      }
+    },
+    "labels": {
+      "wechat": {
+        "title": {
+          "en": "WeChat",
+          "zh": "微信"
+        }
+      }
+    },
+    "sortKeys": {}
+  },
+  "plugins": [
+    {
+      "name": "@cxyxlxdm/dsh-weixin",
+      "title": {
+        "en": "WeChat (ClawBot) channel",
+        "zh": "微信 ClawBot 通道"
+      },
+      "description": {
+        "en": "Chat with a DSH agent from the WeChat ClawBot plugin. Each chat keeps one persistent DSH Session; replies stream back with typing indicator, chunking, and retry.",
+        "zh": "在微信里跟 DSH Agent 对话。每个微信聊天绑定一个持久 Session，回复带回显 token、正在输入提示、分段和重试。"
+      },
+      "author": "cxyxlxdm",
+      "homepage": "https://github.com/cxyxlxdm/dsh-weixin",
+      "repository": {
+        "url": "https://github.com/cxyxlxdm/dsh-weixin"
+      },
+      "metadata": {
+        "category": "messaging",
+        "keywords": ["wechat", "weixin", "clawbot", "ilink", "messaging"],
+        "labels": ["wechat"],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1762700000,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/cxyxlxdm/dsh-weixin.git",
+            "commit": "6078b0bfccacd8845f6ebfb47ebbe853a2865dc9"
+          },
+          "engines": {
+            "dsh": ">=0.2.2-rc.1 <0.3.0"
+          }
+        }
+      ]
+    }
+  ]
+}
