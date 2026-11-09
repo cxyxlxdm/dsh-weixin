@@ -56,7 +56,7 @@
           "source": {
             "type": "git",
             "url": "https://github.com/cxyxlxdm/dsh-weixin.git",
-            "commit": "6078b0bfccacd8845f6ebfb47ebbe853a2865dc9"
+            "commit": "27fc5df27378591764a325a11812b49ea0991849"
           },
           "engines": {
             "dsh": ">=0.2.2-rc.1 <0.3.0"
