@@ -41,7 +41,7 @@ node /Users/cxyxl/Documents/workspace/deepseek-harness/apps/cli/lib/bin.js \
 装完它会出现在 **Plugins → 已安装** 里（bundle 列表），可开关。卸载：
 
 ```bash
-dsh plugin --profile web remove dsh-weixin
+dsh plugin --profile web remove @cxyxlxdm/dsh-weixin
 ```
 
 启用前必须确认：**没有第二个进程在轮询同一个 iLink 账号**。Hermes 网关的 weixin 平台和本插件只能有一个在跑，否则消息会被两边随机抢走。
@@ -51,7 +51,7 @@ dsh plugin --profile web remove dsh-weixin
 ```yaml
 - insert:
     - id: weixin
-      name: dsh-weixin
+      name: "@cxyxlxdm/dsh-weixin"
 ```
 
 配置写在 profile 自己的 `cordis.patch.yml` 里按 id 覆盖，或用 Plugins 页面的配置表单：
@@ -109,6 +109,25 @@ src/account.ts  复用 ~/.hermes/weixin/accounts 下的账号
 ```
 
 状态存在 `storage-domain` 的 `weixin` 域里，由 profile 的 storage 后端落盘，不是私有 JSON 文件。
+
+
+## 发布与插件市场
+
+包名 `@cxyxlxdm/dsh-weixin`。`dsh-weixin` 这个名字在 npm 上已被 [caoyilearnai/dsh-weixin](https://github.com/caoyilearnai/dsh-weixin) 占用（0.2.1），所以用 scope 区分，不抢名。
+
+发 npm：
+
+```bash
+npm publish --access public --registry https://registry.npmjs.org
+```
+
+插件市场走 DSH 的「自定义索引」机制，没有官方中心索引。索引文件是本仓库根目录的 [plugin-index.json](plugin-index.json)，通过 raw.githubusercontent 提供：
+
+```
+https://raw.githubusercontent.com/cxyxlxdm/dsh-weixin/main/plugin-index.json
+```
+
+在 **Plugins → Custom plugin indexes** 里加这个 URL，Discover 页就会出现「微信 ClawBot 通道」；索引里的版本指向 git 源并钉死 commit，所以不依赖 npm 发布也能装。每次发版更新索引里的 `commit` 和时间戳。
 
 ## 排障
 
