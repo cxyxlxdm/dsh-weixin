@@ -45,18 +45,25 @@
       },
       "metadata": {
         "category": "messaging",
-        "keywords": ["wechat", "weixin", "clawbot", "ilink", "messaging"],
-        "labels": ["wechat"],
+        "keywords": [
+          "wechat",
+          "weixin",
+          "clawbot",
+          "ilink",
+          "messaging"
+        ],
+        "labels": [
+          "wechat"
+        ],
         "sortKeys": {}
       },
       "versions": [
         {
-          "version": "0.1.0",
-          "publishTimestamp": 1762700000,
+          "version": "0.1.1",
+          "publishTimestamp": 1794582075,
           "source": {
-            "type": "git",
-            "url": "https://github.com/cxyxlxdm/dsh-weixin.git",
-            "commit": "aaf411fb59de933d06e47be3bad2c689ecde4eb4"
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
           },
           "engines": {
             "dsh": ">=0.2.2-rc.1 <0.3.0"
