@@ -41,8 +41,7 @@
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "node --test tests/smoke.test.mjs",
-    "install-local": "node scripts/install.mjs",
-    "prepublishOnly": "npm run build"
+    "install-local": "node scripts/install.mjs"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "*",
@@ -59,5 +58,9 @@
   },
   "devDependencies": {
     "typescript": "*"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   }
 }
