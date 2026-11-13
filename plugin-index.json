@@ -29,7 +29,7 @@
   },
   "plugins": [
     {
-      "name": "@cxyxlxdm/dsh-weixin",
+      "name": "@cxyxl/dsh-weixin",
       "title": {
         "en": "WeChat (ClawBot) channel",
         "zh": "微信 ClawBot 通道"

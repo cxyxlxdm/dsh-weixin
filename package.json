@@ -1,5 +1,5 @@
 {
-  "name": "@cxyxlxdm/dsh-weixin",
+  "name": "@cxyxl/dsh-weixin",
   "version": "0.1.0",
   "description": "Personal WeChat (ClawBot / iLink) channel for DeepSeek Harness: chat with a DSH agent from the WeChat ClawBot plugin.",
   "type": "module",

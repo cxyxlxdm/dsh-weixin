@@ -41,7 +41,7 @@ node /Users/cxyxl/Documents/workspace/deepseek-harness/apps/cli/lib/bin.js \
 装完它会出现在 **Plugins → 已安装** 里（bundle 列表），可开关。卸载：
 
 ```bash
-dsh plugin --profile web remove @cxyxlxdm/dsh-weixin
+dsh plugin --profile web remove @cxyxl/dsh-weixin
 ```
 
 启用前必须确认：**没有第二个进程在轮询同一个 iLink 账号**。Hermes 网关的 weixin 平台和本插件只能有一个在跑，否则消息会被两边随机抢走。
@@ -51,7 +51,7 @@ dsh plugin --profile web remove @cxyxlxdm/dsh-weixin
 ```yaml
 - insert:
     - id: weixin
-      name: "@cxyxlxdm/dsh-weixin"
+      name: "@cxyxl/dsh-weixin"
 ```
 
 配置写在 profile 自己的 `cordis.patch.yml` 里按 id 覆盖，或用 Plugins 页面的配置表单：
@@ -113,7 +113,7 @@ src/account.ts  复用 ~/.hermes/weixin/accounts 下的账号
 
 ## 发布与插件市场
 
-包名 `@cxyxlxdm/dsh-weixin`。`dsh-weixin` 这个名字在 npm 上已被 [caoyilearnai/dsh-weixin](https://github.com/caoyilearnai/dsh-weixin) 占用（0.2.1），所以用 scope 区分，不抢名。
+包名 `@cxyxl/dsh-weixin`。`dsh-weixin` 这个名字在 npm 上已被 [caoyilearnai/dsh-weixin](https://github.com/caoyilearnai/dsh-weixin) 占用（0.2.1），所以用 scope 区分，不抢名。
 
 发 npm：
 
